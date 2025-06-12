@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="Calculadora">
+        <div class="pantalla" id="pantalla">0</div>
+        <div class="botones">
+            <button class="boton limpiar" onclick="limpiar()">AC</button>
+            <button class="boton operador" onclick="borrar()">⌫</button>
+            <button class="boton operador" onclick="agregarOperador('/')">/</button>
+            <button class="boton operador" onclick="agregarOperador('*')">*</button>
+            
+            <button class="boton numero" onclick="agregarNumero('7')">7</button>
+            <button class="boton numero" onclick="agregarNumero('8')">8</button>
+            <button class="boton numero" onclick="agregarNumero('9')">9</button>
+            <button class="boton operador" onclick="agregarOperador('-')">-</button>
+
+            <button class="boton numero" onclick="agregarNumero('4')">4</button>
+            <button class="boton numero" onclick="agregarNumero('5')">5</button>
+            <button class="boton numero" onclick="agregarNumero('6')">6</button>
+            <button class="boton operador" onclick="agregarOperador('+')">+</button>
+
+            <button class="boton numero" onclick="agregarNumero('1')">1</button>
+            <button class="boton numero" onclick="agregarNumero('2')">2</button>
+            <button class="boton numero" onclick="agregarNumero('3')">3</button>
+            <button class="boton igual" onclick="calcular()" rowspan="2">=</button>
+
+            <button class="boton numero cero" onclick="agregarNumero('0')">0</button>
+            <button class="boton numero" onclick="agregarPunto()">.</button>
+        </div>
+    </div>
+       <script src="js/script.js"></script>
+</body>
+</html>
