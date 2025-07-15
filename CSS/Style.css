@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #c6e70b 0%, #3c0474 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculadora {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 350px;
+    width: 100%;
+}
+
+.pantalla {
+    background: #2d3748;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: right;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.boton {
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.boton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.numero {
+    background: linear-gradient(135deg, #058de7, #d80893);
+    color: #2d3748;
+}
+
+.numero:hover {
+    background: linear-gradient(135deg, #0aca2a, #326ebd);
+}
+
+.operador {
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    color: white;
+}
+
+.operador:hover {
+    background: linear-gradient(135deg, #3182ce, #2c5aa0);
+}
+
+.igual {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    grid-column: span 2;
+}
+
+.igual:hover {
+    background: linear-gradient(135deg, #06e76f, #e21102);
+}
+
+.limpiar {
+    background: linear-gradient(135deg, #f56565, #e53e3e);
+}
+
+.limpiar:hover {
+    background: linear-gradient(135deg, #e53e3e, #c53030);
+}
+
+.cero {
+    grid-column: span 2;
+}
+
+@media (max-width : 400px) {
+    .calculadora{
+        padding: 20px;
+    }
+
+    .pantalla{
+        font-size: 2rem;
+        padding: 15px;
+}
+
+.boton {
+    padding: 15px;
+    font-size: 1rem;
+}
+}
